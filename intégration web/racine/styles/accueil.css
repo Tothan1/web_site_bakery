@@ -1,0 +1,86 @@
+body main{
+    padding: 0%;
+    position: relative;
+}
+body main section{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    height: 103%;
+    width: 100%;
+}
+body main>section >* {
+    display:inline-block;
+	vertical-align: middle;
+} 
+#backgroundblur{
+    content: "";
+    z-index: -95%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.568);
+    height: 100%;
+}
+#background{
+    background-image: url("../medias/accueil/caroussel/bateaumagne-commercial-painpain21.jpg");
+    aspect-ratio: 16/9;
+    background-size: cover;
+    background-position: center;
+    z-index: -91%;
+
+}
+main section p{
+    color: white;
+    position: absolute;
+    top:65%;
+    vertical-align: center;
+    width: 25%;
+    right: 0%;
+    text-shadow:7px 5px 5px rgb(25, 24, 24);
+    font-size: 130%;
+    margin-right: 5%;
+}
+
+iframe{
+    border-radius: 7%;
+    box-shadow: 7px 5px 5px rgba(15, 14, 14, 0.774);
+    position: absolute;
+    top:60%;
+    margin-left: 5%;
+}
+main > section > div{
+    /* rapport hauteur/largeur pour calcul auto de la hauteur */
+    aspect-ratio: 4/3;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 30%;
+    left: 50%;
+    background-image: url("../medias/accueil/carrousel.png");
+    background-position-x:-500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    --largeur-tuile-page: 500px;
+    --hauteur-tuile-page: 375px;
+    width: 100%;
+    background-size: calc(100% * 3) calc(var (--));
+    max-width:var(--largeur-tuile-page);
+    border-radius: 3%;
+    animation : trailer infinite 15s;
+    box-shadow: 0px 0px 50px rgb(151, 151, 151);
+    transition-duration: 2s;
+    }
+    @keyframes trailer { /* définition d’une animation trailer */
+        0%, 10% { background-position-x: 0px;background-position-y: 0%; } /* tuile 1*/
+        15%, 25% { background-position-x: 50%;background-position-y: 0%; } /* tuile 2 */
+        30%, 40% { background-position-x: 100%;background-position-y: 0%; } /* tuile 3 */
+        45%, 55% { background-position-x: 100%;background-position-y: 100%; } /* tuile 4*/
+        60%, 75% { background-position-x: 50%;background-position-y: 100%; } /* tuile 5*/
+        80%, 95% { background-position-x: 0%;background-position-y: 100%; } /* tuile 6*/
+        95%, 100% { background-position-x: 0px;background-position-y: 0%; } /* tuile 1 */
+
+        }
+main > section > div:hover{
+    animation-play-state: paused;
+    cursor: url("../medias/pause-button.png"), auto;
+    
+    box-shadow: 0px 0px 75px rgb(255, 255, 255);
+}

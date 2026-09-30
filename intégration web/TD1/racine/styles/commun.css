@@ -1,0 +1,128 @@
+/* Style commun commun.css */
+
+/* Mesurer la taille des boites en incluant bordures, paddings, et contenu */
+* {
+	box-sizing: border-box;
+}
+
+/* Paramètres globaux => donc modifiables */
+html {
+	--largeur-max-contenu: 1006px;   /* largeur max du contenu */
+	font-family: sans-serif;
+	background-color: whitesmoke;
+	--largeur-logo: 150px;
+	--hauteur-logo: 112px;
+	--scale-logo: 0.5;
+	--largeur-logo-page: calc(var(--largeur-logo)*var(--scale-logo));
+	--hauteur-logo-page: calc(var(--hauteur-logo)*var(--scale-logo));
+}
+
+
+/* CLASSES ------------------------------
+   Classe pour ne pas rendre un élément */
+.none {
+	display: none;
+}
+
+/* BOITES GLOBALES -----------------------*/
+body {
+	margin: 0 auto;
+	max-width: var(--largeur-max-contenu);
+	background-color: black;
+}
+body main{
+	padding: 1.75em;
+}
+
+body > header {
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+body > nav {
+	color: white;
+	display: inline-block;
+	vertical-align: bottom;
+	width : calc(100% - var(--largeur-logo-page));
+	text-align: center;
+
+}
+
+
+body > main {
+		background-color: white;
+}
+
+body > footer {
+	color: white;
+	background-color: darkgray;
+}
+
+/* logo ------------ */
+body > header > img {
+	width: var(--largeur-logo-page);
+	height: var(--hauteur-logo-page);
+	display: block;
+}
+
+/* Menu principal -----*/
+body >nav > ul{
+	list-style-type : none;
+}
+body >nav > ul >li{
+	display: inline-block;
+}
+body >nav > ul > li a{
+	text-decoration : none;
+	background-color:black;
+	color:white;
+	font-size: 0.85rem;
+	padding: 10px;
+}
+
+body >nav > ul > li > em >a{
+	background-color: white;
+	color: black;
+}
+body >nav > ul >li:hover a{
+	background-color: gray;
+	color: black;
+}
+/* footer -----*/
+body > footer>*{
+	display:inline-block;
+	vertical-align: middle;
+	text-align: center;
+}
+body > footer ul li{
+list-style-type: none;
+}
+
+body > footer ul a{
+	color: white;
+	text-decoration: none;
+}
+body > footer em a{
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+}
+body > footer p small{
+	padding-left: 175px;
+}
+body > footer p:nth-of-type(2) a:nth-last-of-type(1),footer p:nth-of-type(2) a:nth-last-of-type(2){
+	color:black;
+}
+body > footer >nav > ul >li:hover a{
+	color: black;
+}
+
+body >footer p:nth-of-type(2) a:nth-last-of-type(2)::before{
+content : '\260e\a0';
+}
+body > footer p:nth-of-type(2) a:nth-last-of-type(1)::before{
+	content:'\1F4E7\a0';
+}
+body > footer div a{
+	color: black;
+}

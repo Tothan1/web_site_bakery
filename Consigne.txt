@@ -1,0 +1,8 @@
+Le site produit doit valider les normes du
+W3C. 
+Le code HTML sera optimisé en évitant de réécrire / dupliquer des blocs HTML,
+par l’exploitation du langage PHP et l’utilisation de tableaux.
+Respecter le cahier des charges
+six pages différentes:Accueil, Équipe,
+Réalisations, Partenaires, Tarifs, et Contact
+menu situé en haut de la page

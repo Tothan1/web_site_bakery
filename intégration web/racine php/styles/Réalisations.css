@@ -1,0 +1,43 @@
+main{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+main section{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	border: solid black 2px ;
+	margin: 15px;
+  background-color: #deb065;
+	border-radius: 10%;
+	height: 325px;
+	width: auto;
+	position: relative;
+}
+main section h3{
+	display: flex;
+	position: absolute;
+	font-weight: bolder;
+	top: 87%;
+}
+main section a img{
+	display: inline-block;
+	border-radius: 10%;
+	height: 300px;
+	width: auto;
+}
+main section a img{
+	opacity: 100%;
+	transition-duration: 0.5s;
+}
+main section a img:hover{ 
+opacity: 50%;
+}
+main section a img:active{ 
+	opacity: 25%;
+}
+
+
+
+

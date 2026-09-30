@@ -1,0 +1,187 @@
+/* Style commun commun.css */
+/*font*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+/* Mesurer la taille des boites en incluant bordures, paddings, et contenu */
+* {
+	box-sizing: border-box;
+}
+*::selection{
+	color: white;
+	background-color: #966100;
+}
+
+/* Paramètres globaux => donc modifiables */
+html {
+	--largeur-max-contenu: 100%;   /* largeur max du contenu */
+	font-family: sans-serif;
+	background-color: whitesmoke;
+	--largeur-logo: 150px;
+	--hauteur-logo: 112px;
+	--scale-logo: 0.5;
+	--largeur-logo-page: calc(var(--largeur-logo)*var(--scale-logo));
+	--hauteur-logo-page: calc(var(--hauteur-logo)*var(--scale-logo));
+}
+
+
+/* CLASSES ------------------------------
+   Classe pour ne pas rendre un élément */
+.none {
+	display: none;
+}
+
+/* BOITES GLOBALES -----------------------*/
+body {
+	margin: 0 auto;
+	max-width: var(--largeur-max-contenu);
+	background-color: black;
+}
+body main{
+	padding: 1.75em;
+}
+body > main {
+		background-color: white;
+}
+
+/*menu*/
+body > header {
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+body > nav {
+	color: white;
+	display: inline-block;
+	vertical-align: bottom;
+	width : calc(100% - var(--largeur-logo-page));
+	text-align: center;
+	top: 0px;
+}
+body > nav ul li a,body > nav ul li em a{
+	border-radius: 12%;
+}
+
+body > nav ul li a{
+	font-family: "Concert One", serif;
+  	font-weight: 400;
+  	font-style: normal;
+}
+
+body > nav ul li em a{
+	transition-duration: 2s;
+	font-family: "Concert One", serif;
+	font-weight: bold;
+	font-size: larger;
+	letter-spacing: 2px;
+}
+body > nav ul li{
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+
+
+
+/* logo ------------ */
+body > header > img {
+	width: var(--largeur-logo-page);
+	height: var(--hauteur-logo-page);
+	display: block;
+}
+
+/* Menu principal -----*/
+body >nav > ul{
+	list-style-type : none;
+}
+body >nav > ul >li{
+	display: inline-block;
+}
+body >nav > ul > li a{
+	text-decoration : none;
+	background-color:black;
+	color:white;
+	padding: 10px;
+	transition-duration: 0.5s;
+}
+
+body >nav > ul > li > em >a{
+	background-color:  #d4971c;;
+	color: white;
+	transition-duration: 0.5s;
+	font-weight: medium;
+}
+body >nav > ul >li:hover a{
+	background-color: #d4971c;
+	color: black;
+	font-size: larger;
+}
+body >nav > ul >li:active a{
+	background-color: #916a1d;
+}
+
+/* footer -----*/
+body > footer>*{
+	display:inline-block;
+	vertical-align: middle;
+	text-align: center;
+	z-index: -90%;
+}
+body > footer{
+	text-align: center;
+	color: white;
+	background-color: rgb(46, 46, 46);
+	z-index: -90%;
+}
+#logo-le-petit-breton{
+	height: 140px;
+	width: auto;
+	margin-right: 1%;
+}
+body > footer ul li{
+list-style-type: none;
+}
+
+body > footer ul a{
+	color: white;
+	text-decoration: none;
+}
+body > footer em a{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+body > footer p:nth-of-type(2) a:nth-last-of-type(1),footer p:nth-of-type(2) a:nth-last-of-type(2){
+	color:white;
+}
+body > footer >nav ul{
+	padding: 0%;
+}
+body > footer >nav > ul >li:hover a{
+	color: #e9b140;
+}
+
+body >footer p:nth-of-type(2) a:nth-last-of-type(2)::before{
+content : '\260e\a0';
+width: 30%;
+}
+body > footer p:nth-of-type(2) a:nth-last-of-type(1)::before{
+    content: "\2709 ";
+	width: 20px;
+}
+body > footer div a{
+	color: white;
+}
+body > footer div a:hover,footer p a:nth-of-type(5):hover,body > footer p:nth-of-type(2) a:nth-last-of-type(1):hover{
+	color: #d4971c;
+}
+
+body > footer div a:active,footer p a:nth-of-type(5):active,body > footer >nav > ul >li:active a,body > footer p:nth-of-type(2) a:nth-last-of-type(1):active{
+	color: #916a1d;
+}
+#barre{
+	height: 140px;
+
+}
+

@@ -1,0 +1,156 @@
+h2 {
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 300%;
+  letter-spacing: 2px;
+}
+
+/*1ère section*/
+main section:nth-of-type(1) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 4%;
+  position: relative;
+  bottom: 2%;
+}
+main section:nth-of-type(1) div {
+  display: inline-block;
+  margin: 1.25%;
+  transform: scale(1);
+  transition: transform 0.7s ease;
+  position: relative;
+}
+main section:nth-of-type(1) div:hover {
+  transform: scale(1.25);
+}
+
+main section:nth-of-type(1) div img {
+  height: 100px;
+  border-top-right-radius: 15%;
+  border-bottom-left-radius: 15%;
+  border-top-left-radius: 11%;
+  border-bottom-right-radius: 11%;
+  box-shadow: 7px 5px 5px rgba(15, 14, 14, 0.774),
+    -3px -2px 5px rgba(75, 74, 74, 0.473);
+  width: auto;
+  z-index: -2;
+}
+main section:nth-of-type(1) div:hover img {
+  animation-duration: 0.5s;
+  animation-name: opacité;
+  animation-delay: 0s;
+  opacity: 0.25;
+}
+@keyframes opacité {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0.25;
+  }
+}
+main section:nth-of-type(1) div a {
+  text-decoration: none;
+}
+
+main section:nth-of-type(1) div p {
+  text-align: center;
+  margin: auto;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 45%;
+  opacity: 0;
+  color: black;
+  font-weight: 600;
+}
+main section:nth-of-type(1) div:hover p {
+  text-align: center;
+  margin: auto;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 45%;
+  animation-name: opacité2;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  opacity: 1;
+}
+@keyframes opacité2 {
+  0%,
+  70% {
+    opacity: 0;
+  }
+  70%,
+  100% {
+    opacity: 1;
+  }
+}
+
+/*2ème section*/
+main section:nth-of-type(2) div {
+  display: inline-block;
+  width: 49%;
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+}
+main section:nth-of-type(2) div p {
+  transition: opacity 1s, top 1s;
+  animation-duration: 3s;
+  animation-name: fadeIn;
+  animation-delay: 0s;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 90%;
+  padding-right: 3%;
+  padding-left: 3%;
+}
+@keyframes fadeIn {
+  0%,
+  50% {
+    opacity: 0;
+  }
+  50%,
+  100% {
+    opacity: 1;
+  }
+}
+main section:nth-of-type(2) div p:nth-of-type(1) {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 150%;
+  margin: 0%;
+  text-align: left;
+  padding-left: 3%;
+  padding-top: 3%;
+}
+
+main section:nth-of-type(2) div img {
+  width: 20%;
+  vertical-align: middle;
+  border-radius: 3%;
+  box-shadow: 3px 2px 0px rgb(15, 14, 14);
+}
+
+main section {
+  vertical-align: middle;
+}
+
+main section:nth-of-type(2) div div {
+  border: solid black 2px;
+  vertical-align: middle;
+  text-align: center;
+  margin-left: 2%;
+}

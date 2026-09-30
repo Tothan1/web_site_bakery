@@ -1,0 +1,226 @@
+/* Style commun commun.css */
+/*font*/
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+/* Mesurer la taille des boites en incluant bordures, paddings, et contenu */
+* {
+  box-sizing: border-box;
+}
+*::selection {
+  color: white;
+  background-color: #966100;
+}
+
+/* Paramètres globaux => donc modifiables */
+html {
+  --largeur-max-contenu: 100%; /* largeur max du contenu */
+  font-family: sans-serif;
+  background-color: whitesmoke;
+  --largeur-logo: 150px;
+  --hauteur-logo: 112px;
+  --scale-logo: 0.5;
+  --largeur-logo-page: calc(var(--largeur-logo) * var(--scale-logo));
+  --hauteur-logo-page: calc(var(--hauteur-logo) * var(--scale-logo));
+}
+
+/* CLASSES ------------------------------
+   Classe pour ne pas rendre un élément */
+.none {
+  display: none;
+}
+
+/* BOITES GLOBALES -----------------------*/
+body {
+  margin: 0 auto;
+  max-width: var(--largeur-max-contenu);
+  background-color: black;
+}
+body main {
+  padding: 1.75em;
+}
+body > main {
+  background-color: white;
+}
+
+/*menu*/
+
+body > nav {
+  color: white;
+  display: inline-block;
+  vertical-align: bottom;
+  width: calc(100% - var(--largeur-logo-page));
+  text-align: center;
+  top: 0px;
+  position: relative;
+}
+body >header> img {
+  display: inline-block;
+  vertical-align: bottom;
+  text-align: left;
+  position: absolute;
+  left: 0;
+  width: var(--largeur-logo-page);
+  height: var(--hauteur-logo-page);
+}
+body > nav ul li a,
+body > nav ul li em a {
+  border-radius: 12%;
+}
+
+body > nav ul li a {
+  font-family: "Concert One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body > nav ul li em a {
+  transition-duration: 2s;
+  font-family: "Concert One", serif;
+  font-weight: bold;
+  font-size: larger;
+  letter-spacing: 2px;
+}
+body > nav ul li {
+  margin-left: 1%;
+  margin-right: 1%;
+}
+#retour{
+  margin-left: 9%;
+}
+
+/* logo ------------ */
+body > span > img {
+  width: var(--largeur-logo-page);
+  height: var(--hauteur-logo-page);
+  display: block;
+}
+
+
+/* Menu principal -----*/
+body > nav > ul {
+  list-style-type: none;
+}
+body > nav > ul > li {
+  display: inline-block;
+}
+body > nav > ul > li a {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  transition-duration: 0.5s;
+}
+body > nav > ul > li > em > a {
+  background-color: #d4971c;
+  color: white;
+  box-shadow:  0px 0px 0px rgb(0, 0, 0);
+  transition-duration: 0.5s;
+  font-weight: bolder;
+  box-shadow: 0 0px 32px  #a26c00;
+}
+body > nav > ul > li:hover a {
+  background-color: #d4971c;
+  color: black;
+  font-size: larger;
+  box-shadow: 0 0px 32px  #a26c00;
+}
+body > nav > ul > li:active a {
+  background-color: #916a1d;
+}
+
+/* footer -----*/
+body > footer > * {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+body > footer {
+  text-align: center;
+  color: white;
+  background-color: rgb(20, 19, 19);
+}
+#logo-le-petit-breton {
+  height: 140px;
+  width: auto;
+}
+body > footer > p:nth-of-type(1){
+  margin-left: 3%;
+  margin-right: 1%;
+}
+body > footer ul li {
+  list-style-type: none;
+}
+
+body > footer ul a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+body > footer nav ul li em a {
+  color: #e9b140;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+body > footer p:nth-of-type(2) a,
+footer p:nth-of-type(2) a:nth-last-of-type(2) {
+  color: white;
+  text-decoration: none;
+}
+body > footer > nav ul {
+  padding: 0%;
+}
+body > footer > nav > ul > li a{
+  transition-duration: 0.8s;
+}
+body > footer > nav > ul > li:hover a {
+  color: #e9b140;
+  font-size: larger;
+  font-weight: bolder;
+  transition-duration: 0.5s;
+}
+body > footer > p:nth-of-type(2) a:nth-last-of-type(3)::before {
+  content: "🧭";
+}
+body > footer > p:nth-of-type(2) a:nth-last-of-type(2)::before {
+  content: "\260e\a0";
+}
+body > footer > p:nth-of-type(2) a:nth-last-of-type(1)::before {
+  content: "\2709 ";
+}
+body > footer > p:nth-of-type(2) a{
+  position: relative;
+}
+body > footer > p:nth-of-type(2) a:after{
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: 0.4s width;
+}
+body > footer > p:nth-of-type(2) a:hover:after{
+  width: 100%;
+  left: 0;
+}
+body > footer div a {
+  color: white;
+}
+body > footer div a:hover,
+footer p a:nth-of-type(5):hover,
+body > footer p:nth-of-type(2) a:hover {
+  color: #d4971c;
+}
+
+body > footer div a:active,
+footer p a:nth-of-type(5):active,
+body > footer > nav > ul > li:active a,
+body > footer p:nth-of-type(2) a:active {
+  color: #916a1d;
+}
+
+.barre {
+  height: 140px;
+}

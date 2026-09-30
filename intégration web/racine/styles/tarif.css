@@ -1,0 +1,91 @@
+h3 {
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 225%;
+  letter-spacing: 2px;
+}
+
+main section {
+  display: flex;
+  flex-wrap: wrap;
+  border: solid black 2px;
+  margin: 5%;
+  padding: 1%;
+}
+main section h3 {
+  display: inline-block;
+  position: absolute;
+  top: 200px;
+}
+main section img {
+  display: inline-block;
+  width: 27%;
+  height: auto;
+  object-fit: cover;
+  position: flex;
+  justify-content: left;
+  left: -10%;
+  margin: 0.5%;
+  border-radius: 8%;
+}
+main section div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  float:right
+}
+#titre {
+  display: flex;
+  align-self: self-start;
+  justify-content: space-around;
+  font-weight: 900;
+  font-size: larger;
+  margin: 0%;
+}
+main section div div:nth-of-type(1) {
+  flex-direction: row;
+  width: 50%;
+  margin-top: 2%;
+}
+main section div div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  top: 0%;
+}
+main section div div:nth-of-type(3) {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  top: 0%;
+}
+
+main section div div ul li {
+  text-align: left;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+main section div div:nth-of-type(2),
+main section div div:nth-of-type(3) {
+  width: 40%;
+}
+main section p {
+  width: 60%;
+  left: 0%;
+  margin: 0%;
+  text-align: left;
+}
+main section > div {
+  border: solid black 2px;
+  width: 60%;
+  text-align: center;
+}
+h3 {
+  position: relative;
+  top: 7%;
+  height: 100%;
+}
